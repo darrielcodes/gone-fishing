@@ -54,7 +54,7 @@ function randomWeight(weight){
 console.log('\nYou\'ve gone fishing! Try to maximize the value of your caught fish. You can fish for six hours (till 12:00pm) and can catch at most 10 lbs of fish.')
 console.log("\n==========================================\n")
 
-console.log(`The time is ${time}:00am. So far you've caught: ${fishCaught.length} fish, ${weightCount} lbs, $${valueCount}.00.`)
+console.log(`The time is ${time}:00am. So far you've caught: ${fishCaught.length} fish, ${sumA} lbs, $${sumB}.00.`)
 
 for (let i = 0; i < 6; i++){
     let newFish = {
@@ -80,9 +80,9 @@ for (let i = 0; i < 6; i++){
             sumA = weightCount[0];
             sumB = valueCount[0];
             } else if (fishCaught.length > 1){
-            sumA += weightCount[i] 
+            sumA += weightCount[weightCount.length-1] 
             //console.log(sumA)
-            sumB += valueCount[i]
+            sumB += valueCount[valueCount.length-1]
             }
         }
         else if (userInput === 'r'){
@@ -115,3 +115,5 @@ for (let i = 0; i < 6; i++){
 }
 
 }
+
+// add if userInput doesnt = c or r or enter
